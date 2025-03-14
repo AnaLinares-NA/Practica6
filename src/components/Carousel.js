@@ -1,7 +1,8 @@
-import {Swiper} from "swiper";
-import {SwiperSlide} from "swiper/vue";
-import {Pagination} from "@mui/material";
-import {Autoplay, Navigation} from "swiper/modules";
+import {Swiper, SwiperSlide } from "swiper/react";
+import {Autoplay, Navigation, Pagination} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Carousel = () => {
     return (
@@ -14,7 +15,7 @@ const Carousel = () => {
             autoplay={{delay: 3000}}
         >
             <SwiperSlide>
-                <img src="Diapositiva1.png" alt="Slide 1" className="slide" />
+                <img src="Diapositiva1.png" alt="Slide 1" className="slide" style={{width: "50%"}}/>
             </SwiperSlide>
             <SwiperSlide>
                 <img src="Diapositiva2.png" alt="Slide 2" className="slide" />
@@ -24,6 +25,6 @@ const Carousel = () => {
             </SwiperSlide>
         </Swiper>
     )
-}
+};
 
 export default Carousel;
