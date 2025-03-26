@@ -1,65 +1,17 @@
 import React from 'react';
 import { Typography } from '@mui/material';
+import PokemonCard from "./PokemonCard";
 
 const About = () => {
-    return (
-        <Typography>
-            Lorem ipsum<br/>
-            Mi esposa y yo<br/>
-            Igual que ustedes, compartimos en la vida un eterno amor<br/>
-            La dama perfecta, toda una belleza, ella es mi inspiración <br/>
-            Somos feliz ella y yo<br/>
-            Ella y yo<br/>
-            <br/>
-            Oye Don, lucha por amor<br/>
-            <br/>
-            Quizás su marido no mande en su corazón<br/>
-            <br/>
-            Oye mi pana, lucha por amor<br/>
-            <br/>
-            Quizás ese tipo no mande en su corazón<br/>
-            <br/>
-            Mi esposa y yo<br/>
-            Somos felices, dos almas, matices en lo que es el amor<br/>
-            Por eso te entiendo, y aunque sea casada, no te alejes por temor<br/>
-            No lo hagas Don, ay, no, no, no<br/>
-            <br/>
-            Ay, ya te expliqué<br/>
-            Cuando hay personas que se aman, el amor tiene que vencer<br/>
-            Y que el marido entienda que perdió a su hembra, ahora es tu mujer<br/>
-            No pueden ganar los tres<br/>
-            <br/>
-            Y te repito, lucha por amor<br/>
-            <br/>
-            Quizás su marido no mande en su corazón<br/>
-            <br/>
-            No seas tan tonto, lucha por amor<br/>
-            <br/>
-            Quizás ese tipo no mande en su corazón<br/>
-            <br/>
-            ¿Qué?<br/>
-            <br/>
-            No, yo no estoy creyendo esto<br/>
-            <br/>
-            No, no<br/>
-            <br/>
-            Que te perdone Dios, yo no lo voy a hacer<br/>
-            Los perdí a los dos, y a la misma vez<br/>
-            Ya veo que todo era mentira cuando ella me decía<br/>
-            Que se iba pa Puerto Rico a vacaciones con su amiga<br/>
-            <br/>
-            Me mintió<br/>
-            Tú y ella en una cama, allá en Bayamón<br/>
-            Quizás en Isla Verde o Carolina, ¿cuántos hoteles ensució?<br/>
-            Tú también, los odio a los dos<br/>
-            No me entiende<br/>
-            <br/>
-            Fue una traición<br/>
-            <br/>
-            Adiós...<br/>
+        const data = {"count":1302,"items":[{"id":1,"name":"bulbasaur","weight":69,"types":[{"type":{"name":"grass","url":"https://pokeapi.co/api/v2/type/12/"},"slot":1},{"type":{"name":"poison","url":"https://pokeapi.co/api/v2/type/4/"},"slot":2}],"abilities":[{"ability":{"name":"overgrow","url":"https://pokeapi.co/api/v2/ability/65/"},"is_hidden":false,"slot":1},{"ability":{"name":"chlorophyll","url":"https://pokeapi.co/api/v2/ability/34/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"}},{"id":2,"name":"ivysaur","weight":130,"types":[{"type":{"name":"grass","url":"https://pokeapi.co/api/v2/type/12/"},"slot":1},{"type":{"name":"poison","url":"https://pokeapi.co/api/v2/type/4/"},"slot":2}],"abilities":[{"ability":{"name":"overgrow","url":"https://pokeapi.co/api/v2/ability/65/"},"is_hidden":false,"slot":1},{"ability":{"name":"chlorophyll","url":"https://pokeapi.co/api/v2/ability/34/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"}},{"id":3,"name":"venusaur","weight":1000,"types":[{"type":{"name":"grass","url":"https://pokeapi.co/api/v2/type/12/"},"slot":1},{"type":{"name":"poison","url":"https://pokeapi.co/api/v2/type/4/"},"slot":2}],"abilities":[{"ability":{"name":"overgrow","url":"https://pokeapi.co/api/v2/ability/65/"},"is_hidden":false,"slot":1},{"ability":{"name":"chlorophyll","url":"https://pokeapi.co/api/v2/ability/34/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"}},{"id":4,"name":"charmander","weight":85,"types":[{"type":{"name":"fire","url":"https://pokeapi.co/api/v2/type/10/"},"slot":1}],"abilities":[{"ability":{"name":"blaze","url":"https://pokeapi.co/api/v2/ability/66/"},"is_hidden":false,"slot":1},{"ability":{"name":"solar-power","url":"https://pokeapi.co/api/v2/ability/94/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"}},{"id":5,"name":"charmeleon","weight":190,"types":[{"type":{"name":"fire","url":"https://pokeapi.co/api/v2/type/10/"},"slot":1}],"abilities":[{"ability":{"name":"blaze","url":"https://pokeapi.co/api/v2/ability/66/"},"is_hidden":false,"slot":1},{"ability":{"name":"solar-power","url":"https://pokeapi.co/api/v2/ability/94/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"}},{"id":6,"name":"charizard","weight":905,"types":[{"type":{"name":"fire","url":"https://pokeapi.co/api/v2/type/10/"},"slot":1},{"type":{"name":"flying","url":"https://pokeapi.co/api/v2/type/3/"},"slot":2}],"abilities":[{"ability":{"name":"blaze","url":"https://pokeapi.co/api/v2/ability/66/"},"is_hidden":false,"slot":1},{"ability":{"name":"solar-power","url":"https://pokeapi.co/api/v2/ability/94/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"}},{"id":7,"name":"squirtle","weight":90,"types":[{"type":{"name":"water","url":"https://pokeapi.co/api/v2/type/11/"},"slot":1}],"abilities":[{"ability":{"name":"torrent","url":"https://pokeapi.co/api/v2/ability/67/"},"is_hidden":false,"slot":1},{"ability":{"name":"rain-dish","url":"https://pokeapi.co/api/v2/ability/44/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"}},{"id":8,"name":"wartortle","weight":225,"types":[{"type":{"name":"water","url":"https://pokeapi.co/api/v2/type/11/"},"slot":1}],"abilities":[{"ability":{"name":"torrent","url":"https://pokeapi.co/api/v2/ability/67/"},"is_hidden":false,"slot":1},{"ability":{"name":"rain-dish","url":"https://pokeapi.co/api/v2/ability/44/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"}},{"id":9,"name":"blastoise","weight":855,"types":[{"type":{"name":"water","url":"https://pokeapi.co/api/v2/type/11/"},"slot":1}],"abilities":[{"ability":{"name":"torrent","url":"https://pokeapi.co/api/v2/ability/67/"},"is_hidden":false,"slot":1},{"ability":{"name":"rain-dish","url":"https://pokeapi.co/api/v2/ability/44/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"}},{"id":10,"name":"caterpie","weight":29,"types":[{"type":{"name":"bug","url":"https://pokeapi.co/api/v2/type/7/"},"slot":1}],"abilities":[{"ability":{"name":"shield-dust","url":"https://pokeapi.co/api/v2/ability/19/"},"is_hidden":false,"slot":1},{"ability":{"name":"run-away","url":"https://pokeapi.co/api/v2/ability/50/"},"is_hidden":true,"slot":3}],"sprites":{"front_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"}}]}
 
-        </Typography>
-    );
+        return (
+        <div>
+                {data.items.map((item,index) => (<PokemonCard item = {item}/>))}
+
+                <h1>ojala funcione</h1>
+        </div>
+    )
 };
 
 export default About;
